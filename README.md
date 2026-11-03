@@ -4,7 +4,7 @@
 Site e-commerce une seule page pour la marque de vêtements DIDUVI XOLA (Bruxelles). Deux produits : un pull en édition limitée et un t-shirt fait à la commande. Ton luxueux, texte d'abord, palette crème / brun / or.
 
 ## À propos des fichiers
-`Site DIDUVI XOLA v6.dc.html` est une **maquette de référence en HTML**, pas du code de production. Il faut **recréer** ce design dans la stack de ton choix (Shopify, WooCommerce, Next.js + Stripe/Mollie…). Pour voir la maquette : ouvrir `site-diduvi-xola-standalone.html` dans un navigateur (fichier autonome, marche hors ligne).
+`Site DIDUVI XOLA v6.dc.html` est une **maquette de référence en HTML**, pas du code de production. Il faut **recréer** ce design dans la stack de ton choix (Shopify, WooCommerce, Next.js + Stripe/Mollie…). Pour voir la maquette : ouvrir `index.html` dans un navigateur (fichier autonome, marche hors ligne).
 
 ## Fidélité
 **Haute fidélité** : couleurs, typos, espacements et textes sont définitifs. À reproduire tels quels. Les photos sont des placeholders (le shoot a eu lieu le 14 oct., photos à venir).
@@ -117,7 +117,7 @@ Paiement (checkout), confirmation de commande, emails transactionnels (confirmat
 **Photos** : toutes passent par le même filtre sépia. À reproduire en CSS ou à appliquer directement aux images à l'export.
 
 ## Fichiers
-- `site-diduvi-xola-standalone.html` : la maquette, à ouvrir directement.
+- `index.html` : la maquette, à ouvrir directement.
 - `Site DIDUVI XOLA v6.dc.html` : la source de la maquette. Les classes et les données (produits, textes légaux) sont en bas du fichier, dans `class Component`.
 - `logo/` : les logos en SVG (crème, brun, or).
 - `support.js` et `image-slot.js` : nécessaires seulement pour afficher la source.
