@@ -2,12 +2,12 @@
 
 ## Version actuelle (v7, novembre 2026)
 `index.html` est désormais la nouvelle version du site (une seule page, chargée par `app.js`). Changements principaux par rapport à la v6 décrite plus bas :
-- **Lancement** : la collection ouvre le **27.11.26**. Avant cette date, les boutons passent en « PRÉCOMMANDER » et un formulaire email permet de recevoir le lien de paiement en premier.
+- **Lancement** : précommandes ouvertes, **vente officielle le 27.11.26** (« LA COLLECTION — VENTE OFFICIELLE » dans le hero). Avant cette date, les boutons passent en « PRÉCOMMANDER » et un formulaire email permet de recevoir le lien de paiement en premier.
 - **Accueil** : hero « L'Œil de l'Artiste » avec vraie photo (`photos/accueil.jpg`), « La collection — en ligne » et « Le dinner — Bruxelles · sur invitation », date en jaune.
-- **Nouvelles sections** : N° 01 La maison, N° 02 L'atelier / L'œil de l'artiste (collection Acte I), N° 03 La trilogie, N° 04 L'histoire.
+- **Nouvelles sections** : N° 01 La maison, N° 02 L'atelier / L'œil de l'artiste (collection Acte I), N° 03 La trilogie (Acte I : vente + dinner fondateur le 27.11.26 ; mini-métrage *L'Œil de l'Artiste* ; Acte III : défilé en 2027 avec d'autres artistes), N° 04 L'histoire.
 - **Produits** :
-  - Le Pull : 175 €, **taille unique**, sur commande, stock limité, pièces numérotées.
-  - Le T-shirt : **45 €**, S à XL, coton biologique personnalisé à la main.
+  - Le Pull, nommé **6°14′ N** (coordonnées) : 175 €, **taille unique**, sur commande, stock limité, pièces numérotées.
+  - Le T-shirt, nommé **6°08′ N** : **45 €**, S à XL, coton biologique personnalisé à la main.
 - **Délai** : fabriqué à la commande, livré en **1 à 2 semaines**.
 - **Livraison Bruxelles** : le créneau se choisit sur deux roues (jour de la semaine + heure de 10:00 à 21:00).
 - **Palette** : ajout d'un rouge `#A8231D` et d'un jaune `#F2A51F` ; nouveaux logos « œil jaune » dans `logo/site/`. Typo ajoutée : IBM Plex Mono.
