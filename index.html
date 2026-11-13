@@ -16,7 +16,13 @@
 body{margin:0;background:#F5ECD7;color:#2C1A0E;-webkit-font-smoothing:antialiased}
 a{color:#2C1A0E;text-decoration:none}a:hover{color:#A8231D}
 button{font:inherit;color:inherit}
-[style*="font-size:10px"],[style*="font-size: 10px"]{font-family:'IBM Plex Mono',monospace}
+[style*="font-size:10px"],[style*="font-size: 10px"]{font-family:'IBM Plex Mono',monospace;font-size:11px!important}
+@media (max-width:520px){header[style*="font-size: 10px"],header [style*="font-size: 10px"],header[style*="font-size:10px"],header [style*="font-size:10px"]{font-size:10px!important}}
+body{font-variant-numeric:tabular-nums}
+h1,h2{text-wrap:balance}p{text-wrap:pretty}
+button{transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .12s ease}button:active{transform:scale(.98)}
+img{animation:dxin .5s ease both}@keyframes dxin{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){img{animation:none}button{transition:none}button:active{transform:none}}
 </style>
 </helmet>
 <div style="font-family:'Hanken Grotesk',sans-serif;background:#F5ECD7;color:#2C1A0E;min-height:100vh;display:flex;flex-direction:column">
@@ -70,7 +76,7 @@ button{font:inherit;color:inherit}
 <h1 style="margin:0;font-family:'Rozha One',serif;font-weight:400;line-height:.95;text-wrap:balance;transform:translateY({{ titreY }})"><span style="font-size:clamp(56px,10vw,150px)">L'Œ</span><span style="font-size:clamp(38px,6.6vw,100px);letter-spacing:.05em">IL DE L'</span><span style="font-size:clamp(56px,10vw,150px)">A</span><span style="font-size:clamp(38px,6.6vw,100px);letter-spacing:.05em">RTISTE</span></h1>
 <div style="position:absolute;left:0;right:0;top:calc(50% + {{ annonceTop }});padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:clamp(22px,3.4vh,34px)"><div style="display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr);align-items:stretch;width:min(100%,600px)"><div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;padding:4px clamp(10px,3vw,28px)"><span style="font-family:'Rozha One',serif;font-size:clamp(18px,2vw,24px);line-height:1"><span style="font-size:clamp(22px,2.4vw,30px)">L</span><span style="font-size:clamp(15px,1.6vw,20px);letter-spacing:.05em">A COLLECTION</span></span><span style="font-size:10px;letter-spacing:.3em">VENTE OFFICIELLE</span></div><span style="width:1px;background:rgba(245,236,215,.55)"></span><div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;padding:4px clamp(10px,3vw,28px)"><span style="font-family:'Rozha One',serif;font-size:clamp(18px,2vw,24px);line-height:1"><span style="font-size:clamp(22px,2.4vw,30px)">L</span><span style="font-size:clamp(15px,1.6vw,20px);letter-spacing:.05em">E DINNER</span></span><span style="font-size:10px;letter-spacing:.3em">BRUXELLES · SUR INVITATION</span></div></div><span style="font-family:'Rozha One',serif;font-size:clamp(20px,2.4vw,30px);line-height:1;letter-spacing:.24em;padding-left:.24em;color:#F2A51F">27.11.26</span></div>
 </div>
-<div style="position:absolute;left:0;right:0;bottom:32px;display:flex;justify-content:center"><button onClick="{{ goShop }}" style="background:none;border:0;border-bottom:0;padding:8px 0 6px;cursor:pointer;font-size:11px;font-weight:500;letter-spacing:.34em;color:#F2A51F" style-hover="color:#F5ECD7">BOUTIQUE</button></div>
+<div style="position:absolute;left:0;right:0;bottom:32px;display:flex;justify-content:center"><button onClick="{{ goShop }}" style="background:#F2A51F;border:0;padding:16px 34px 15px;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.34em;padding-left:calc(34px + .34em);color:#2C1A0E" style-hover="background:#F5ECD7">BOUTIQUE</button></div>
 </section>
 </sc-if>
 
@@ -129,7 +135,6 @@ button{font:inherit;color:inherit}
 <button onClick="{{ g.open }}" aria-label="{{ g.alt }}" style="flex:0 0 88%;height:100%;position:relative;display:block;overflow:hidden;scroll-snap-align:start;border:0;padding:0;background:#E9DDC4;cursor:pointer" style-hover="opacity:.92"><img src="{{ g.src }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></button>
 </sc-for>
 </div>
-<span style="font-size:10px;letter-spacing:.2em;color:#6B5545">{{ p.galleryHint }}</span>
 </div>
 </sc-if>
 <sc-if value="{{ p.noPhotos }}">
@@ -171,7 +176,7 @@ button{font:inherit;color:inherit}
 <span style="font-size:10px;letter-spacing:.06em;color:#6B5545">{{ prod.def }}</span>
 </div>
 <div style="display:flex;flex-direction:column;gap:22px">
-<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px"><span style="font-family:'Rozha One',serif;font-size:30px">{{ prod.price }}</span><span style="font-size:10px;letter-spacing:.2em;color:#6B5545">TVA COMPRISE</span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px"><span style="font-family:'Rozha One',serif;font-size:30px">{{ prod.price }}</span></div>
 <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap"><span style="font-size:10px;letter-spacing:.24em">TAILLE</span>
 <sc-for list="{{ sizes }}" as="s">
 <button onClick="{{ s.pick }}" style="background:none;border:0;border-bottom:1px solid {{ s.line }};padding:6px 2px;cursor:pointer;font-family:'Rozha One',serif;font-size:22px;color:{{ s.fg }}" style-hover="color:#2C1A0E">{{ s.label }}</button>
@@ -327,6 +332,7 @@ class Component extends Site {
     mentions: { label: 'Mentions légales', short: 'MENTIONS LÉGALES', title: 'Mentions légales', blocks: [
       { h: 'LA MAISON', t: "Diduvi Xola, maison de couture afromoderne fondée à Bruxelles par Lawson Latévi Horatio. La société est en cours de constitution. Ses coordonnées complètes seront publiées ici." },
       { h: 'DIRECTION DE LA PUBLICATION', t: "Lawson Latévi Horatio, fondateur et directeur artistique." },
+      { h: 'CONTACT', t: "diduvixola@gmail.com" },
       { h: 'PROPRIÉTÉ INTELLECTUELLE', t: "Le nom, le signe, les textes, les images et les créations Diduvi Xola appartiennent à la maison. Toute reproduction, même partielle, demande son accord écrit." } ] },
     cgv: { label: 'Conditions de vente', short: 'CGV', title: 'Conditions générales de vente', blocks: [
       { h: 'LES PIÈCES', t: "Chaque pièce est faite à la main, à la commande, dans l'atelier à Bruxelles. De légères différences d'une pièce à l'autre font partie du travail." },
@@ -347,7 +353,7 @@ class Component extends Site {
       { h: 'PARTAGE', t: "Vos données ne sont ni vendues ni louées. Elles passent seulement par les services nécessaires au paiement et à l'envoi." },
       { h: 'DURÉE', t: "Le temps de la commande et des obligations comptables, puis elles sont effacées." },
       { h: 'COOKIES', t: "Le site n'utilise pas de cookies publicitaires." },
-      { h: 'VOS DROITS', t: "Accès, rectification, effacement, opposition, selon le RGPD. Vous pouvez aussi saisir l'Autorité de protection des données (autoriteprotectiondonnees.be)." } ] },
+      { h: 'VOS DROITS', t: "Accès, rectification, effacement, opposition, selon le RGPD. Écrivez-nous à diduvixola@gmail.com. Vous pouvez aussi saisir l'Autorité de protection des données (autoriteprotectiondonnees.be)." } ] },
   };
   componentDidMount() { this.onWheelNative = e => { const el = e.target.closest && e.target.closest('[role="slider"][aria-label$="de livraison"]'); if (!el) return; e.preventDefault(); const k = el.getAttribute('aria-label').startsWith('Jour') ? 'day' : 'hour'; this.wheel(k, k === 'day' ? this.DAYS : this.HOURS)[k + 'Wheel'](e); }; window.addEventListener('wheel', this.onWheelNative, { passive: false }); if (this.state.page === 'panier') this.syncWheels(); this.tick = setInterval(() => this.setState({ now: Date.now() }), 60000); this.onScroll = () => { const s = window.scrollY > 4; if (s !== this.state.scrolled) this.setState({ scrolled: s }); }; window.addEventListener('scroll', this.onScroll); }
   wheel(k, list) {
